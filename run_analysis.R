@@ -1,23 +1,3 @@
-# README
-Author: Stephen Streufert
-
-Project: Coursera - Getting and Cleaning Data, Project
-
-Date: Saturday, March 21, 2015
-
-# Instructions
-To repeat the results,
-
-1. Launch R (or R Studio)
-2. Set your working directory, for example: setwd("~/Statistics/Getting and Cleaning Data/Project")
-3. Load and Execute the R script file: run_analysis.R
-
-The final output, tidy_data.txt, will be saved to your current working directory.
-
-# Source code and documentation for run_analysis.R
-The source code is fully documents (and included here). Step number 0.1-0.9 are performed in preparation for completing the project instructions. Step numbers 1-5 are from the original project instructions.
-
-```R
 # Instructions: You should create one R script called run_analysis.R that does the following. 
 # 0.1 load packages
 library(data.table)
@@ -111,9 +91,3 @@ z <- x %>% dplyr::group_by(subject, activity) %>% dplyr::summarise_each(funs(mea
 
 # save results to a txt file
 write.table(z, file="./tidy_data.txt", row.names=FALSE)
-```
-
-
-# Further Information
-* Development and testing was performed on Windows 7 SP1, x64 using R x64 version 3.1.2 and R Studio version 0.98.1091.
-* You will find details about the source project and data sets in the CodeBook.md.
